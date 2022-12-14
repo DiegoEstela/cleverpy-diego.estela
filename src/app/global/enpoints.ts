@@ -1,0 +1,1 @@
+export const allUserEndpoints : string = 'https://jsonplaceholder.typicode.com/posts'
