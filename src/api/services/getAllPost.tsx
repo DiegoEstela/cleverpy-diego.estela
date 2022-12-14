@@ -4,7 +4,7 @@ import {IallPost} from '../../app/global/interfaces'
 import {setPostsList} from "../../store/slices/post";
 
 
-export async function getAllPost(dispatch: any) {
+export async function getAllPost(dispatch : Function ) {
     try {
       const { data, status } : {data : IallPost[] , status: number} = await axios.get<Array<IallPost>>(
         allUserEndpoints,
