@@ -1,15 +1,12 @@
-import { QueryClientProvider, QueryClient } from "react-query";
 import { Provider } from "react-redux";
 import store from "./store";
-import Home from './presentations/views/Home'
-const queryClient = new QueryClient();
+import Router from './Router/index'
+
 
 function App() {
   return (
     <Provider store={store}>
-      <QueryClientProvider client={queryClient}>
-        <Home/>
-      </QueryClientProvider>
+        <Router/>
     </Provider>
   );
 }
