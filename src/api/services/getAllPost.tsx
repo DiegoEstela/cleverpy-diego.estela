@@ -1,9 +1,10 @@
 import axios from "axios";
 import {allUserEndpoints} from '../../app/global/enpoints'
 import {IallPost} from '../../app/global/interfaces'
+import {setPostsList} from "../../store/slices/post";
 
 
-export async function getAllPost() : Promise<IallPost[] | string>   {
+export async function getAllPost(dispatch: any) {
     try {
       const { data, status } : {data : IallPost[] , status: number} = await axios.get<Array<IallPost>>(
         allUserEndpoints,
@@ -14,7 +15,7 @@ export async function getAllPost() : Promise<IallPost[] | string>   {
         },
       );
       console.log('response status is: ', status);
-      return data;
+      dispatch(setPostsList(data))
     } catch (error) {
       if (axios.isAxiosError(error)) {
         console.log('error message: ', error.message);

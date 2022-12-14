@@ -1,13 +1,16 @@
-import { useQuery } from "react-query";
-import { getAllPost } from "./api/services/getAllPost";
-function App() {
-  const {data: allPost } = useQuery(['allPost'],() => getAllPost())
-  console.log(allPost)
+import { QueryClientProvider, QueryClient } from "react-query";
+import { Provider } from "react-redux";
+import store from "./store";
+import Home from './presentations/views/Home'
+const queryClient = new QueryClient();
 
+function App() {
   return (
-    <div className="App">
-      <h1>hola</h1>
-    </div>
+    <Provider store={store}>
+      <QueryClientProvider client={queryClient}>
+        <Home/>
+      </QueryClientProvider>
+    </Provider>
   );
 }
 
