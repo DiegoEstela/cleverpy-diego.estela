@@ -3,7 +3,8 @@ import { useDispatch, useSelector} from 'react-redux'
 import { getAllPost } from '../../../api/services/getAllPost'
 import { IallPost, Istate } from '../../../app/global/interfaces'
 import PostContainer from '../PostsContainer/index'
-function ListAllPost() {
+
+function ListAllPost() : JSX.Element{
   const {list} : {list : IallPost[]} = useSelector((state : Istate) => state.postsSlice)
   const dispatch : Function = useDispatch()
   
@@ -12,7 +13,7 @@ function ListAllPost() {
   },[dispatch])
 
   return (
-    <PostContainer Posts={list}/>
+    <PostContainer posts={list}/>
   )
 }
 

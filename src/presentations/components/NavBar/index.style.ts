@@ -11,26 +11,24 @@ export const Nav = styled.nav`
 `;
 
 export const NavUl = styled.ul`
-  width: 50%;
+  width: 50vw;
   display: flex;
   flex-direction: row;
   list-style: none;
 `;
 
 export const NavLi = styled.ul`
-  margin-left: 20px;
   font-size: 20px;
   width: 100%;
-  font-weight: bolder;
   display: flex;
   justify-content: center;
   align-items: center;
-  .links{
+  .links {
     font-size: 2rem;
     color: ${vars.Withe};
-    text-transform:none;
+    text-transform: none;
     text-decoration: none;
-    :hover{
+    :hover {
       color: ${vars.Pink};
     }
   }
