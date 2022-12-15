@@ -7,8 +7,8 @@ const Navbar = () => {
       <Nav>
         <NavUl>
           <NavLi>
-            <NavLink to="/category/unoVeinte" className="links">
-              1-20
+          <NavLink to="/category/unoyveinte" className="links">
+              01-20
             </NavLink>
           </NavLi>
           <NavLi>
