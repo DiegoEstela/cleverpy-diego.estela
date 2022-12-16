@@ -23,7 +23,7 @@ En este proyecto se utilizaron las siguientes herramientas:
 ## Para comenzar
 
 1. Debe clonar el repositorio utilizando :
-**Git clone** https://github.com/DiegoEstela/cleverpy-diego.estelaa.git
+**Git clone** https://github.com/DiegoEstela/cleverpy-diego.estela.git
 2. Luego, deberá intalar todas las dependencias del proyecto ejecutando:
 *yarn** 
 3. Para finalizar, puede ejecutar el proyecto y realizar cualquier tipo de Prueba ejecutando:
