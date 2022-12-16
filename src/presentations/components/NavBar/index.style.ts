@@ -19,17 +19,18 @@ export const NavUl = styled.ul`
 `;
 
 export const NavLi = styled.ul`
-  font-size: 1em;
+  font-size: 16px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   .links {
-    font-size: 2rem;
+    font-size: 1.2rem;
     color: ${vars.Withe};
     text-transform: none;
     text-decoration: none;
     :hover {
+      border-top: 1px solid ${vars.Pink};
       color: ${vars.Pink};
     }
   }

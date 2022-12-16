@@ -8,9 +8,21 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const TitleBox = styled.span`
-  margin-right: 5%;
-  color: ${vars.Primary};
+
+export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+  width: 100%;
+  height: 20vh;
+  color: ${vars.Withe};
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+`;
+
+export const TitleSpan = styled.span`
+color: ${vars.Primary};
+margin-right: 16px;
 `;
 
 export const Card = styled.div`
@@ -44,11 +56,7 @@ export const Card = styled.div`
     justify-content: center;
     text-align: center;
     h1 {
-      font-size: 1rem;
-      height: 30%;
-      line-height: 60px;
-      color: ${vars.Withe};
-      background: rgba(0, 0, 0, 0.4);
+    
     }
     .number {
       display: flex;

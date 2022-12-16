@@ -1,7 +1,13 @@
 import { Nav, NavUl, NavLi, ImgBox } from "./index.style";
 import { NavLink } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { IallPost } from '../../../app/global/interfaces'
+import { RootState } from "../../../store/index"
 
 const Navbar = (): JSX.Element => {
+  const {list : Allposts} : {list : IallPost[]} = useSelector((state: RootState) => state.postsSlice)
+ 
+
   return (
     <>
       <Nav>
@@ -9,20 +15,20 @@ const Navbar = (): JSX.Element => {
         <img src="/cleverpyLogo.png" alt="" />
         </ImgBox>
         <NavUl>
-          <NavLi>
-            <NavLink to="/category/unoyveinte" className="links">
-              01-20
+          <NavLi onClick={()=> window.location.reload()}>
+          <NavLink  to="/" className="links">
+              RESET POST 
             </NavLink>
           </NavLi>
           <NavLi>
             <NavLink to="/category/bajos" className="links">
-              21-40
+              LOOGIN
             </NavLink>
           </NavLi>
           <NavLi>
-            <NavLink to="/category/baterias" className="links">
-              41-60
-            </NavLink>
+          <div className="links">
+              AMOUNT OF POST:  {Allposts.length}
+            </div>
           </NavLi>
         </NavUl>
       </Nav>

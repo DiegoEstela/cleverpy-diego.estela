@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { IallPost, IModalContain } from "../../../app/global/interfaces";
 import { deletePostById } from "../../../store/slices/post";
-import { Container, Card, TitleBox} from "./index.style";
+import { Container, Card, TitleSpan, TitleContainer} from "./index.style";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import AnimatedButton from "../../components/AnimatedButton";
 import ModalEditPost from "../../components/ModalEditPost/"
@@ -16,8 +16,6 @@ function PostContainer({ posts }: any): JSX.Element {
     dispatch(deletePostById(id));
   };
 
-  console.log(modal)
-
 
   return (
     <Container>
@@ -28,10 +26,14 @@ function PostContainer({ posts }: any): JSX.Element {
             <div className="number">
               <span>{post.id}</span>
             </div>
-            <h1><TitleBox>TITLE:</TitleBox>{post.title.slice(0, 30)}</h1>
+            <TitleContainer> 
+              <h1><TitleSpan>TITLE:</TitleSpan>{post.title.slice(0, 15)} </h1>
+              <h2><TitleSpan>AUTOR:</TitleSpan>{post.userId} </h2>
+            </TitleContainer>
+            
           </div>
           <div className="face back">
-            <h1>{post.title}</h1>
+            <h1>TITLE: {post.title}</h1>
             <p>{post.body.slice(0, 30)}...</p>
             <Link className="LinkBotton" to={`post/${post.id}`}>
               <AnimatedButton text={"Ver mas"} />
