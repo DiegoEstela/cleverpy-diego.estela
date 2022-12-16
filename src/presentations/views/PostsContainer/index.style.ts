@@ -25,9 +25,12 @@ color: ${vars.Primary};
 margin-right: 16px;
 `;
 
-export const TitleNoLogin = styled.span`
-color: ${vars.Primary};
-margin-right: 16px;
+export const TitleNoLogin = styled.h1`
+display: flex;
+width: 100%;
+text-align: center;
+color: ${vars.Text};
+font-size: 2rem;
 `;
 
 export const Card = styled.div`

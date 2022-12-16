@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { Signup } from "../../../../api/services/Auth";
-import { BodyLogin, CardLogin, Input, ButtonModal } from "../index.style";
+import { BodyLogin, CardLogin, Input, ButtonModal, Logo } from "../index.style";
 
 export const SingUp = () => {
   const [status, setStatus] = useState<boolean>(false);
@@ -32,6 +32,7 @@ export const SingUp = () => {
   return (
     <BodyLogin>
       <CardLogin>
+      <Logo src="/logo.jpg" alt="" />
         <div className="card-header">
           {error && <p className="error">{error}</p>}
           <h1>Registrarse</h1>

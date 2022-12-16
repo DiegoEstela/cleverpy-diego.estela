@@ -13,11 +13,16 @@ export const BodyLogin = styled.div`
   text-align: center;
 `;
 
+export const Logo = styled.img`
+  width: 60%;
+`;
+
+
 export const CardLogin = styled.div`
   color: ${vars.Withe};
   margin-top: 5vh;
   background-color: ${vars.Primary};
-  width: 50vw;
+  width: 30vw;
   height: 50vh;
   padding: 10px;
   text-align: center;
@@ -58,9 +63,9 @@ export const CardLogin = styled.div`
 `
 export const Input = styled.input`
   display: flex;
-  width: 40%;
+  width: 60%;
   height: 32px;
-  margin: 2% 30%;
+  margin: 2% 20%;
   border: none;
   padding: 10px;
   font-size: 20px;
@@ -68,8 +73,8 @@ export const Input = styled.input`
 `
 
 export const ButtonModal = styled.button`
-  width: 20%;
-  margin: 0 40%;
+  width: 40%;
+  margin: 2% 10%;
   text-align: center;
 	padding: 10px 30px;
   font-size: 1.5rem;

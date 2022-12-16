@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
 import { LoginUser } from "../../../../api/services/Auth"
-import {BodyLogin, CardLogin, Input, ButtonModal} from "../index.style"
+import {BodyLogin, CardLogin, Input, ButtonModal, Logo} from "../index.style"
 
 
 
@@ -37,12 +37,14 @@ export const Login = () => {
   return (
     <BodyLogin >
       <CardLogin>
+      <Logo src="/logo.jpg" alt="" />
         <div className="card-header">
           {error && <p className="error">{error}</p>}
           <h1>Iniciar Sesion</h1>
         </div>
         <div className="card-body">
           <label> Email</label>
+         
         <Input
             type='text'
             name='email'
