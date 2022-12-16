@@ -11,8 +11,8 @@ Esta es una app encargada de manejar post (ver, editar, eliminar)
 En este proyecto se utilizaron las siguientes herramientas:
 
 - ReactJs 18.
-- TypesCritp (tipado)
-- CSS (con clases, puro y style component).
+- TypeScript (tipado)
+- CSS (con clases, puro, style component).
 - React Router Dom (navegación).
 - Axios (fetching)
 - Redux Toolkit (manejo de datos)
