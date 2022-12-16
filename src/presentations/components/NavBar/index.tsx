@@ -1,13 +1,14 @@
-import { useState } from "react";
-import { Nav, NavUl, NavLi, ImgBox } from "./index.style";
+import { useContext } from "react";
+import { Nav, NavUl, NavLi,Li, ImgBox } from "./index.style";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { IallPost } from "../../../app/global/interfaces";
+import { AuthContext } from '../../../app/global/authContext'
+import { IallPost, IUser } from "../../../app/global/interfaces";
 import { RootState } from "../../../store/index";
 import { logout } from "../../../api/services/Auth";
 
 const Navbar = (): JSX.Element => {
-  const [userAuth, setUserAuth] = useState<boolean>(true)
+  const currentUser : IUser | null = useContext(AuthContext);
   const { list: Allposts }: { list: IallPost[] } = useSelector(
     (state: RootState) => state.postsSlice
   );
@@ -16,7 +17,6 @@ const Navbar = (): JSX.Element => {
 
   const HandleLogout =  ()  =>{
     logout()
-    setUserAuth(false)
   }
 
 
@@ -27,7 +27,7 @@ const Navbar = (): JSX.Element => {
           <img src="/cleverpyLogo.png" alt="" />
         </ImgBox>
         <NavUl>
-          {userAuth ? 
+          {currentUser ? 
           <NavLi onClick={() => window.location.reload()}>
           <NavLink to="/post" className="links">
             RESET POST
@@ -35,7 +35,7 @@ const Navbar = (): JSX.Element => {
         </NavLi> : ""}
           
           <NavLi>
-            {userAuth ? (
+            {currentUser ? (
               <NavLink onClick={HandleLogout} to="/login" className="links">
                 LOGOUT
               </NavLink>
@@ -45,10 +45,10 @@ const Navbar = (): JSX.Element => {
               </NavLink>
             )}
           </NavLi>
-          {userAuth ?
-          <NavLi>
+          {currentUser ?
+          <Li>
           <div className="links">AMOUNT OF POST: {Allposts.length}</div>
-        </NavLi> :
+        </Li> :
         ""
         }
           

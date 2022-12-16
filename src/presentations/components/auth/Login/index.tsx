@@ -39,8 +39,7 @@ export const Login = () => {
       <CardLogin>
       <Logo src="/logo.jpg" alt="" />
         <div className="card-header">
-          {error && <p className="error">{error}</p>}
-          <h1>Iniciar Sesion</h1>
+          {error ?  <p className="error">{error}</p> :  <h1>Iniciar Sesion</h1>}
         </div>
         <div className="card-body">
           <label> Email</label>

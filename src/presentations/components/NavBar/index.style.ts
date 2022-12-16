@@ -18,7 +18,7 @@ export const NavUl = styled.ul`
   list-style: none;
 `;
 
-export const NavLi = styled.ul`
+export const NavLi = styled.li`
   font-size: 16px;
   width: 100%;
   display: flex;
@@ -33,6 +33,21 @@ export const NavLi = styled.ul`
       border-top: 1px solid ${vars.Pink};
       color: ${vars.Pink};
     }
+  }
+`;
+
+export const Li = styled.ul`
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: none;
+  .links {
+    font-size: 1.2rem;
+    color: ${vars.Withe};
+    text-transform: none;
+    text-decoration: none;
   }
 `;
 

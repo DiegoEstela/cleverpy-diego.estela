@@ -32,10 +32,9 @@ export const SingUp = () => {
   return (
     <BodyLogin>
       <CardLogin>
-      <Logo src="/logo.jpg" alt="" />
+        <Logo src="/logo.jpg" alt="" />
         <div className="card-header">
-          {error && <p className="error">{error}</p>}
-          <h1>Registrarse</h1>
+          {error ? <p className="error">{error}</p> : <h1>Registrarse</h1>}
         </div>
         <div className="card-body">
           <label> Email</label>

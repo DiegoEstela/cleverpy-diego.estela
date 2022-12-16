@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { IallPost, IModalContain } from "../../../app/global/interfaces";
+import { IallPost, IModalContain, PropTypesPost } from "../../../app/global/interfaces";
 import { deletePostById } from "../../../store/slices/post";
 import { Container, Card, TitleSpan, TitleContainer, TitleNoLogin} from "./index.style";
 import { FaEdit, FaTrash } from "react-icons/fa";
@@ -10,8 +10,7 @@ import ModalEditPost from "../../components/ModalEditPost/"
 
 
 
-function PostContainer({ posts }: any): JSX.Element {
-  const [userAuth, setUserAuth] = useState<boolean>(true)
+function PostContainer({ posts , currentUser } : PropTypesPost): JSX.Element {
   const [modal, setModal] = useState<IModalContain >({open: false, post: null} )
   const dispatch = useDispatch();
   const HandleDelete = (id: number) => {
@@ -21,7 +20,7 @@ function PostContainer({ posts }: any): JSX.Element {
 
   return (
     <Container> 
-    {userAuth ?  <>
+    {currentUser ?  <>
       {posts.map((post: IallPost) => (
         <> 
         <Card key={post.id}>
