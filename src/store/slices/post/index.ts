@@ -13,16 +13,27 @@ export const postsSlice = createSlice({
             state.list = action.payload
         },
         deletePostById: (state , action : PayloadAction<number>) =>{
-            const postFound = state.list.find(post => post.id === action.payload)
-            if(postFound){
-                state.list.splice(state.list.indexOf(postFound), 1)
+            const foundPost = state.list.find(post => post.id === action.payload)
+            if(foundPost){
+                state.list.splice(state.list.indexOf(foundPost), 1)
             }
+        },
+        editPost: (state , action : PayloadAction<IallPost>) =>{
+            const {id , userId, title, body} = action.payload
+            const foundPost = state.list.find(post => post.id === id)
+            if(foundPost){
+                foundPost.id = id
+                foundPost.userId = userId
+                foundPost.title = title
+                foundPost.body = body
+            }
+
+
         }
-       
     }
 })
 
-export const {setPostsList, deletePostById} = postsSlice.actions
+export const {setPostsList, deletePostById, editPost} = postsSlice.actions
 
 export default  postsSlice.reducer
 
