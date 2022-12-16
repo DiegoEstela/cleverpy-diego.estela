@@ -1,8 +1,9 @@
-export const Primary : string = '#0A6DD7';
-export const Secondary : string = '#A13DDF';
-export const Pink : string  = '#E9008C';
-export const Text : string =  '#1E1E1E';
+export const Primary : string = '#000032';
+export const Secondary : string = '#01012B';
+export const Pink : string  = '#E31C79';
+export const Text : string =  '#EEEEF0';
 export const TextSecondary : string = '#b1b1b1';
 export const Withe : string = '#FFFFFF';
 export const Font : string  = 'nunito';
-export const Shadow : string = '5px 5px 15px 5px rgba(0, 0, 0, 0.2);'
+export const Shadow : string = '-1px 0px 13px 2px rgba(255,255,255,1)';
+export const ShadowContainer : string = '-1px 5px 10px 2px rgba(255,255,255,1)';
