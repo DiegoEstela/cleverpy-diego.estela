@@ -10,7 +10,6 @@ import { Container } from './index.style'
 
 
 function ListAllPost() : JSX.Element{
-
   const {list : Allposts} : {list : IallPost[]} = useSelector((state: RootState) => state.postsSlice)
   const dispatch : Function = useDispatch()
 

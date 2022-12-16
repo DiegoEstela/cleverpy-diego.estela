@@ -7,23 +7,17 @@ import { Container, Card, TitleSpan, TitleContainer, TitleNoLogin} from "./index
 import { FaEdit, FaTrash } from "react-icons/fa";
 import AnimatedButton from "../../components/AnimatedButton";
 import ModalEditPost from "../../components/ModalEditPost/"
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+
 
 
 function PostContainer({ posts }: any): JSX.Element {
-  const [userAuth, setUserAuth] = useState<boolean>(false)
+  const [userAuth, setUserAuth] = useState<boolean>(true)
   const [modal, setModal] = useState<IModalContain >({open: false, post: null} )
   const dispatch = useDispatch();
   const HandleDelete = (id: number) => {
     dispatch(deletePostById(id));
   };
-  const auth = getAuth();
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-     setUserAuth(true)
 
-    } 
-  });
 
   return (
     <Container> 

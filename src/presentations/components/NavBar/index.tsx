@@ -5,24 +5,18 @@ import { useSelector } from "react-redux";
 import { IallPost } from "../../../app/global/interfaces";
 import { RootState } from "../../../store/index";
 import { logout } from "../../../api/services/Auth";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const Navbar = (): JSX.Element => {
-  const [userAuth, setUserAuth] = useState<boolean>(false)
+  const [userAuth, setUserAuth] = useState<boolean>(true)
   const { list: Allposts }: { list: IallPost[] } = useSelector(
     (state: RootState) => state.postsSlice
   );
-  const auth = getAuth();
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-     setUserAuth(true)
-    }
-  });
+
+
 
   const HandleLogout =  ()  =>{
     logout()
     setUserAuth(false)
-   
   }
 
 
