@@ -1,10 +1,9 @@
 # CLEVERPY TEST
 
+https://user-images.githubusercontent.com/83254494/208204946-ec3a77e3-e264-4610-b43e-f788e7353e63.mp4
 
 Esta es una app encargada de manejar post (ver, editar, eliminar) 
 ## Link de la app deployada: https://cleverpy-diego-estela.vercel.app/
-
-
 
 ## Herramientas:
 
