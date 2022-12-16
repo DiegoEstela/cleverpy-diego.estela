@@ -24,16 +24,6 @@ const Navbar = (): JSX.Element => {
               41-60
             </NavLink>
           </NavLi>
-          <NavLi>
-            <NavLink to="/category/cuerdas" className="links">
-              61-80
-            </NavLink>
-          </NavLi>
-          <NavLi>
-            <NavLink to="/category/percusion" className="links">
-              81-100
-            </NavLink>
-          </NavLi>
         </NavUl>
       </Nav>
     </>

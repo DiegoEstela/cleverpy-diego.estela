@@ -8,11 +8,8 @@ export const Container = styled.div`
   justify-content: center;
 `;
 
-export const TitleBox = styled.h1`
-  width: 80%;
-  display: grid;
-  justify-content: start;
-  padding-left: 8%;
+export const TitleBox = styled.span`
+  margin-right: 5%;
   color: ${vars.Primary};
 `;
 
@@ -21,14 +18,14 @@ export const Card = styled.div`
   position: relative;
   height: 32vh;
   width: 16vw;
-  :hover{
-      cursor: pointer;
-      .front{
-        transform: perspective(600px) rotateY(180deg);
-      }
-      .back{
-        transform: perspective(600px) rotateY(360deg);  
-      }
+  :hover {
+    cursor: pointer;
+    .front {
+      transform: perspective(600px) rotateY(180deg);
+    }
+    .back {
+      transform: perspective(600px) rotateY(360deg);
+    }
   }
   .face {
     position: absolute;
@@ -52,9 +49,8 @@ export const Card = styled.div`
       line-height: 60px;
       color: ${vars.Withe};
       background: rgba(0, 0, 0, 0.4);
-
     }
-    .number{
+    .number {
       display: flex;
       border-radius: 100%;
       height: 30%;
@@ -63,7 +59,7 @@ export const Card = styled.div`
       align-items: center;
       align-content: center;
       text-align: center;
-      span{
+      span {
         width: 100%;
         font-size: 3rem;
         font-weight: bolder;
@@ -82,42 +78,37 @@ export const Card = styled.div`
     box-shadow: ${vars.Shadow};
 
     h1 {
-      font-size: 16px;
+      font-size: 1em;
       width: 100%;
-      height: 60px;
-      line-height: 60px;
+      height: 50px;
       color: ${vars.Withe};
       background: rgba(0, 0, 0, 0.4);
       text-align: center;
     }
   }
-  .LinkBotton{
+  .LinkBotton {
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     height: 40px;
     text-decoration: none;
-
   }
-  .boxIcon{
+  .boxIcon {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     height: 20%;
     border-top: solid 1px ${vars.Withe};
-  
-    .icon{
+
+    .icon {
       font-size: 32px;
-      :hover{
+      :hover {
         color: ${vars.Primary};
         transition: 0.5s;
       }
     }
   }
 `;
-
-
-
 

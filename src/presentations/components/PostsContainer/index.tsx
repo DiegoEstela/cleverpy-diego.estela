@@ -1,16 +1,21 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { IallPost } from "../../../app/global/interfaces";
 import { deletePostById } from "../../../store/slices/post";
-import AnimatedButton from "../ AnimatedButton/index";
-import { Container, Card, TitleBox } from "./index.style";
+import { Container, Card, TitleBox} from "./index.style";
 import { FaEdit, FaTrash } from "react-icons/fa";
+import AnimatedButton from "../ AnimatedButton/index";
+import ModalEditPost from "../ModalEditPost/index"
 
 function PostContainer({ posts }: any): JSX.Element {
+  const [openModal, setOpenModal] = useState<Boolean>(false)
   const dispatch = useDispatch();
   const HandleDelete = (id: number) => {
     dispatch(deletePostById(id));
   };
+
+  console.log(openModal)
 
   return (
     <Container>
@@ -30,11 +35,16 @@ function PostContainer({ posts }: any): JSX.Element {
             </Link>
             <div className="boxIcon">
               <FaTrash className="icon" onClick={() => HandleDelete(post.id)} />
-              <FaEdit className="icon" />
+              <FaEdit className="icon" onClick={(e) => setOpenModal(true)}/>
             </div>
           </div>
         </Card>
       ))}
+      {openModal ? (
+        <div>
+          <ModalEditPost setOpenModal={setOpenModal} />
+        </div>
+      ) : ""}
     </Container>
   );
 }

@@ -10,9 +10,7 @@ export const postsSlice = createSlice({
     initialState,
     reducers:{
         setPostsList: (state , action : PayloadAction<Array<IallPost>>) =>{
-            action.payload.forEach((post : IallPost)=>{
-                state.list.push(post);
-            })
+            state.list = action.payload
         },
         deletePostById: (state , action : PayloadAction<number>) =>{
             const postFound = state.list.find(post => post.id === action.payload)
