@@ -20,7 +20,7 @@ function PostDetail(): JSX.Element {
           Post Number {postForId?.id} : {postForId?.title}{" "}
         </Title>
         <Paragraph> {postForId?.body}</Paragraph>
-        <Link className="AbautLink" to={`/`}>
+        <Link className="AbautLink" to={`/post`}>
           <AnimatedButton text={"VOLVER"} />
         </Link>
       </DivPost>

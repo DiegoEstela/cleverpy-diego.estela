@@ -59,6 +59,7 @@ export const Login = () => {
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
               handleChangeLoginUser(e.target.name, e.target.value)
             }/>
+            
               <Link className="linkLogin" to="/">
             <ButtonModal onClick={(e) => handlePreSubmit(e)}>Aceptar</ButtonModal>
             </Link>

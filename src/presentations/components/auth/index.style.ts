@@ -72,6 +72,12 @@ export const Input = styled.input`
 
 `
 
+export const WarningInput = styled.span`
+  display: flex;
+  justify-content: center;
+
+`
+
 export const ButtonModal = styled.button`
   width: 40%;
   margin: 2% 10%;

@@ -37,7 +37,7 @@ function PostContainer({ posts , currentUser } : PropTypesPost): JSX.Element {
           <div className="face back">
             <h1>TITLE: {post.title}</h1>
             <p>{post.body.slice(0, 30)}...</p>
-            <Link className="LinkBotton" to={`post/${post.id}`}>
+            <Link className="LinkBotton" to={`/post/${post.id}`}>
               <AnimatedButton text={"Ver mas"} />
             </Link>
             <div className="boxIcon">
