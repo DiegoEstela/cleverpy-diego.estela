@@ -7,18 +7,25 @@ import { Container, Card, TitleSpan, TitleContainer} from "./index.style";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import AnimatedButton from "../../components/AnimatedButton";
 import ModalEditPost from "../../components/ModalEditPost/"
+import { getAuth } from "firebase/auth";
+
+
+
 
 
 function PostContainer({ posts }: any): JSX.Element {
+  
   const [modal, setModal] = useState<IModalContain >({open: false, post: null} )
   const dispatch = useDispatch();
   const HandleDelete = (id: number) => {
     dispatch(deletePostById(id));
   };
-
+  const auth = getAuth();
+  const user = auth.currentUser;
 
   return (
-    <Container>
+    <Container> 
+    {user ?  <>
       {posts.map((post: IallPost) => (
         <> 
         <Card key={post.id}>
@@ -54,6 +61,7 @@ function PostContainer({ posts }: any): JSX.Element {
        showHeader={true}
        />
       ) : ""}
+    </> : <h1> No se puede acceder a los post por favor logueate</h1>}
     </Container>
   );
 }

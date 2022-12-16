@@ -57,7 +57,7 @@ export const ButtonModal = styled.button`
 	border-radius: 100px;
 	color: #fff;
 	border: none;
-	background: #1766DC;
+	background: ${vars.Pink};
 	cursor: pointer;
 	font-family: 'Roboto', sans-serif;
 	font-weight: 500;

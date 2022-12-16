@@ -25,6 +25,11 @@ color: ${vars.Primary};
 margin-right: 16px;
 `;
 
+export const TitleNoLogin = styled.span`
+color: ${vars.Primary};
+margin-right: 16px;
+`;
+
 export const Card = styled.div`
   margin-top: 6vh;
   position: relative;
