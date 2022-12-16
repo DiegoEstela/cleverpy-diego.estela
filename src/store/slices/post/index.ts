@@ -1,13 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction} from "@reduxjs/toolkit";
+import { IallPost, IInitialState } from "../../../app/global/interfaces";
+
+const initialState: IInitialState= {
+    list: [],
+  };
 
 
 export const postsSlice = createSlice({
     name:'posts',
-    initialState:{
-        list:[]
-    },
+    initialState,
     reducers:{
-        setPostsList: (state , action) =>{
+        setPostsList: (state , action : PayloadAction<Array<IallPost>>) =>{
             state.list = action.payload
         }
     }

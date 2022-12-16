@@ -1,3 +1,4 @@
+
 export interface IallPost{
     userId: number,
     id : number,
@@ -5,6 +6,6 @@ export interface IallPost{
     body: string
 }
 
-export interface Istate{
-    postsSlice: any,
+export interface IInitialState{
+    list: IallPost[]
 }
