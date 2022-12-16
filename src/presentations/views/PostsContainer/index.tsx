@@ -5,8 +5,8 @@ import { IallPost } from "../../../app/global/interfaces";
 import { deletePostById } from "../../../store/slices/post";
 import { Container, Card, TitleBox} from "./index.style";
 import { FaEdit, FaTrash } from "react-icons/fa";
-import AnimatedButton from "../ AnimatedButton/index";
-import ModalEditPost from "../ModalEditPost/index"
+import AnimatedButton from "../../components/AnimatedButton";
+import ModalEditPost from "../../components/ModalEditPost/"
 
 function PostContainer({ posts }: any): JSX.Element {
   const [openModal, setOpenModal] = useState<Boolean>(false)

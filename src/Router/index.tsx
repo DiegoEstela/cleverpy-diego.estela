@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from '../presentations/components/NavBar/index'
-import ListAllPost from '../presentations/components/ListAllPosts'
-import PostDetail from '../presentations/components/PostDetail'
+import ListAllPost from '../presentations/views/ListAllPosts'
+import PostDetail from '../presentations/views/PostDetail'
 
 function Router() {
   return (
