@@ -5,20 +5,21 @@ export const Nav = styled.nav`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 8vh;
+  height: 10vh;
   font-size: 16px;
   background-color: ${vars.Primary};
+  border-bottom: 1px solid ${vars.Withe};
 `;
 
 export const NavUl = styled.ul`
-  width: 50vw;
+  width: 70vw;
   display: flex;
   flex-direction: row;
   list-style: none;
 `;
 
 export const NavLi = styled.ul`
-  font-size: 20px;
+  font-size: 1em;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -32,4 +33,11 @@ export const NavLi = styled.ul`
       color: ${vars.Pink};
     }
   }
+`;
+
+export const ImgBox = styled.ul`
+  width: 20%;
+  height: 100%;
+  display: flex;
+
 `;

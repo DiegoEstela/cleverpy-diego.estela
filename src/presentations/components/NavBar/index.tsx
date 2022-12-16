@@ -1,10 +1,13 @@
-import { Nav, NavUl, NavLi } from "./index.style";
+import { Nav, NavUl, NavLi, ImgBox } from "./index.style";
 import { NavLink } from "react-router-dom";
 
 const Navbar = (): JSX.Element => {
   return (
     <>
       <Nav>
+        <ImgBox> 
+        <img src="/cleverpyLogo.png" alt="" />
+        </ImgBox>
         <NavUl>
           <NavLi>
             <NavLink to="/category/unoyveinte" className="links">

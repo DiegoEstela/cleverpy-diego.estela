@@ -4,6 +4,7 @@ import { getAllPost } from '../../../api/services/getAllPost'
 import { IallPost } from '../../../app/global/interfaces'
 import { RootState } from "../../../store/index"
 import PostContainer from '../PostsContainer/index'
+import { Container } from './index.style'
 
 function ListAllPost() : JSX.Element{
   const {list} : {list : IallPost[]} = useSelector((state: RootState) => state.postsSlice)
@@ -14,7 +15,9 @@ function ListAllPost() : JSX.Element{
   },[dispatch])
 
   return (
-    <PostContainer posts={list}/>
+    <Container> 
+      <PostContainer posts={list}/>
+    </Container>
   )
 }
 

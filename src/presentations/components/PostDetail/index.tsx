@@ -2,7 +2,8 @@ import { useParams, Link } from "react-router-dom";
 import { RootState } from "../../../store";
 import { IallPost } from "../../../app/global/interfaces";
 import { useSelector } from "react-redux";
-import { Container, DivPost, Title } from "./index.style";
+import { Container, DivPost, Title, Paragraph } from "./index.style";
+import AnimatedButton from "../ AnimatedButton";
 
 function PostDetail(): JSX.Element {
   const { id } = useParams();
@@ -14,11 +15,10 @@ function PostDetail(): JSX.Element {
   return (
     <Container>
       <DivPost>
-        <Title> {postForId?.title} </Title>
-        <h2>{postForId?.id}</h2>
-        <p> {postForId?.body}</p>
+        <Title> Post Number {postForId?.id} : {postForId?.title} </Title>
+        <Paragraph> {postForId?.body}</Paragraph>
         <Link className="AbautLink" to={`/`}>
-          <span>Volver</span>
+          <AnimatedButton text={'VOLVER'}/>
         </Link>
       </DivPost>
     </Container>
