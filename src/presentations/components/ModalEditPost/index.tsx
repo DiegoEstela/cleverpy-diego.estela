@@ -31,7 +31,7 @@ const ModalEditPost = ({
     setFormData({ ...formData, [key]: value });
   };
 
-  const handlePreSubmit = async (e: any) => {
+  const handlePreSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     await dispatch(editPost(formData as IallPost));
     changeState(false);

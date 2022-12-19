@@ -20,7 +20,7 @@ export const ModalContainer = styled.div`
   position: relative;
   border-radius: 5px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  padding: ${(props: any) => (props.padding ? props.padding : "20px")};
+  padding: "20px";
 `;
 
 export const ModalHeader = styled.div`

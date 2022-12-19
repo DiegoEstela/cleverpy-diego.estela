@@ -15,7 +15,7 @@ export const SingUp = () => {
     setUserLogin({ ...userLogin, [key]: value });
   };
 
-  const handlePreSubmit = async (e: any) => {
+  const handlePreSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try {
       const res = await Signup(userLogin?.email, userLogin?.password);

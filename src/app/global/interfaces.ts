@@ -1,4 +1,5 @@
 import { UserMetadata } from "firebase/auth";
+import  firebase  from "@firebase/auth-types";
 
 export interface IallPost {
   userId: number;
@@ -25,25 +26,6 @@ export interface IModalContain {
 
 export interface PropTypesPost {
   readonly posts: IallPost[];
-  readonly currentUser: IUser | null;
+  readonly currentUser: firebase.User | null;
 }
 
-export interface IUser {
-  accessToken: string;
-  auth?: object;
-  displayName?: boolean;
-  email: string;
-  emailVerified: boolean;
-  isAnonymous: boolean;
-  metadata: UserMetadata;
-  phoneNumber?: null;
-  photoURL?: null;
-  proactiveRefresh?: object;
-  providerData?: object[];
-  providerId: string;
-  reloadListener?: null;
-  reloadUserInfo?: object;
-  stsTokenManager?: object;
-  tenantId?: null;
-  uid: string;
-}

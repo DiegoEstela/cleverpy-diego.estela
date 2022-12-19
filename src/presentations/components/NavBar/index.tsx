@@ -1,14 +1,15 @@
 import { useContext } from "react";
+import  firebase  from "@firebase/auth-types";
 import { Nav, NavUl, NavLi,Li, ImgBox } from "./index.style";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { AuthContext } from '../../../app/global/authContext'
-import { IallPost, IUser } from "../../../app/global/interfaces";
+import { AuthContext } from '../../../app/global/authContext/AuthContext'
+import { IallPost } from "../../../app/global/interfaces";
 import { RootState } from "../../../store/index";
 import { logout } from "../../../api/services/Auth";
 
 const Navbar = (): JSX.Element => {
-  const currentUser : IUser | null = useContext(AuthContext);
+  const currentUser : firebase.User | null = useContext(AuthContext);
   const { list: Allposts }: { list: IallPost[] } = useSelector(
     (state: RootState) => state.postsSlice
   );

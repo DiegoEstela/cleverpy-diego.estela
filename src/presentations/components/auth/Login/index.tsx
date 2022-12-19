@@ -3,9 +3,6 @@ import { Link, Navigate } from "react-router-dom";
 import { LoginUser } from "../../../../api/services/Auth"
 import {BodyLogin, CardLogin, Input, ButtonModal, Logo} from "../index.style"
 
-
-
-
 export const Login = () => {
   const [status, setStatus] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null);
@@ -18,7 +15,7 @@ export const Login = () => {
     setUserLogin({ ...userLogin, [key]: value });
   };
   
-  const handlePreSubmit = async (e : any) => {
+  const handlePreSubmit = async (e : React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     try{
       const res =await LoginUser(userLogin?.email , userLogin?.password)
