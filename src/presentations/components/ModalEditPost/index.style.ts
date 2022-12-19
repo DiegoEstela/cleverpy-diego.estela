@@ -15,7 +15,7 @@ export const Overlay = styled.div`
 
 export const ModalContainer = styled.div`
   width: 30vw;
-  height: 60vh;
+  height: auto;
   background: #fff;
   position: relative;
   border-radius: 5px;
@@ -64,12 +64,13 @@ export const CloseBoton = styled.div`
 export const ButtonModal = styled.button`
   font-size: 1.5rem;
   display: block;
+  margin: 24px 0;
   padding: 10px 30px;
   border-radius: 100px;
   color: ${vars.Text};
   border: none;
   background: ${vars.Pink};
-  cursor: pointer;  
+  cursor: pointer;
   &:hover {
     background: ${vars.Primary};
   }
@@ -97,17 +98,18 @@ export const Contain = styled.div`
   .inputText {
     font-size: 1rem;
     height: 3vh;
-    width: 80%;
+    width: 84%;
+    border-radius: 5px;
   }
   label {
     margin: 1rem 0;
   }
   textarea {
-    margin: 2%;
     padding: 2%;
     font-size: 1rem;
     height: 24vh;
     width: 80%;
+    border-radius: 5px;
     text-align: justify;
   }
 `;
