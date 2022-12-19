@@ -55,5 +55,4 @@ export const ImgBox = styled.ul`
   width: 20%;
   height: 100%;
   display: flex;
-
 `;

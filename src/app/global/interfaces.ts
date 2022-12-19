@@ -1,4 +1,3 @@
-import { UserMetadata } from "firebase/auth";
 import  firebase  from "@firebase/auth-types";
 
 export interface IallPost {

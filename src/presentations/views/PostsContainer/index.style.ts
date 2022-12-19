@@ -2,12 +2,24 @@ import styled from "styled-components";
 import * as vars from "../../../app/global/colors";
 
 export const Container = styled.div`
-  width: 90%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+`;
+
+export const TitleH1 = styled.h1`
+  color: ${vars.Withe};
+  text-align: center;
+`;
+
+export const CardContainer = styled.div`
+  margin-left: 5vw;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
 `;
-
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -21,16 +33,16 @@ export const TitleContainer = styled.div`
 `;
 
 export const TitleSpan = styled.span`
-color: ${vars.Primary};
-margin-right: 16px;
+  color: ${vars.Primary};
+  margin-right: 16px;
 `;
 
 export const TitleNoLogin = styled.h1`
-display: flex;
-width: 100%;
-text-align: center;
-color: ${vars.Text};
-font-size: 2rem;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  color: ${vars.Text};
+  font-size: 2rem;
 `;
 
 export const Card = styled.div`
@@ -64,7 +76,6 @@ export const Card = styled.div`
     justify-content: center;
     text-align: center;
     h1 {
-    
     }
     .number {
       display: flex;
@@ -127,4 +138,3 @@ export const Card = styled.div`
     }
   }
 `;
-
