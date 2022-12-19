@@ -18,16 +18,25 @@ export const DivPost = styled.div`
   box-shadow: ${vars.Shadow};
   border-radius: 16px;
   background-color: ${vars.Pink};
+  @media only screen and (max-width: 700px) {
+    width: 90vw;
+  }
 `;
 
 export const Title = styled.h1`
   font-size: 2rem;
   text-align: center;
   color: ${vars.Withe};
+  @media only screen and (max-width: 700px) {
+    font-size: 1.5rem;
+  }
 `;
 export const Paragraph = styled.p`
   padding: 0 2%;
   font-size: 1.5rem;
   text-align: justify;
   color: ${vars.Withe};
+  @media only screen and (max-width: 700px) {
+    font-size: 1.25rem;
+  }
 `;

@@ -19,6 +19,10 @@ export const CardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-content: center;
+  @media only screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -50,6 +54,10 @@ export const Card = styled.div`
   position: relative;
   height: 32vh;
   width: 16vw;
+  @media only screen and (max-width: 700px) {
+    width: 70vw;
+    margin-left: 6vh;
+  }
   :hover {
     cursor: pointer;
     .front {

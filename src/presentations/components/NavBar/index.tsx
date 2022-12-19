@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import firebase from "@firebase/auth-types";
-import { Nav, NavUl, NavLi, Li, ImgBox } from "./index.style";
+import { Nav, NavUl, NavLi, Li, ImgBox, NavLiLogin} from "./index.style";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { AuthContext } from "../../../app/global/authContext/AuthContext";
@@ -35,7 +35,7 @@ const Navbar = (): JSX.Element => {
             ""
           )}
 
-          <NavLi>
+          <NavLiLogin>
             {currentUser ? (
               <NavLink onClick={HandleLogout} to="/login" className="links">
                 LOGOUT
@@ -45,7 +45,7 @@ const Navbar = (): JSX.Element => {
                 LOGIN
               </NavLink>
             )}
-          </NavLi>
+          </NavLiLogin>
           {currentUser ? (
             <Li>
               <div className="links">AMOUNT OF POST: {Allposts.length}</div>

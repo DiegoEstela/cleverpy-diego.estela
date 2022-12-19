@@ -27,6 +27,13 @@ export const CardLogin = styled.div`
   text-align: center;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.507);
   border-radius: 10px;
+  @media only screen and (max-width: 700px) {
+    width: 90vw;
+    height: 70vh;
+    h1 {
+      font-size: 1rem;
+    }
+  }
 
   .error {
     padding: 10px;
@@ -68,6 +75,10 @@ export const Input = styled.input`
   border: none;
   padding: 10px;
   font-size: 20px;
+  @media only screen and (max-width: 700px) {
+    width: 82%;
+    margin: 5vw;
+  }
 `;
 
 export const WarningInput = styled.span`

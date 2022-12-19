@@ -24,6 +24,28 @@ export const NavLi = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
+
+  .links {
+    font-size: 1.2rem;
+    color: ${vars.Withe};
+    text-transform: none;
+    text-decoration: none;
+    :hover {
+      border-top: 1px solid ${vars.Pink};
+      color: ${vars.Pink};
+    }
+  }
+`;
+
+export const NavLiLogin = styled.li`
+  font-size: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   .links {
     font-size: 1.2rem;
     color: ${vars.Withe};
@@ -43,6 +65,9 @@ export const Li = styled.ul`
   justify-content: center;
   align-items: center;
   cursor: none;
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
   .links {
     font-size: 1.2rem;
     color: ${vars.Withe};
