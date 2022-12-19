@@ -46,7 +46,7 @@ function PostContainer({ posts, currentUser }: PropTypesPost): JSX.Element {
                     <TitleContainer>
                       <h1>
                         <TitleSpan>TITLE:</TitleSpan>
-                        {post.title.slice(0, 15)}{" "}
+                        {post.title}{" "}
                       </h1>
                       <h2>
                         <TitleSpan>AUTOR:</TitleSpan>

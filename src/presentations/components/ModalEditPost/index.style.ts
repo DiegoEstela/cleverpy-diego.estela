@@ -15,7 +15,7 @@ export const Overlay = styled.div`
 
 export const ModalContainer = styled.div`
   width: 30vw;
-  height: 50vh;
+  height: 60vh;
   background: #fff;
   position: relative;
   border-radius: 5px;
@@ -33,7 +33,8 @@ export const ModalHeader = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid ${vars.Primary};
   h3 {
-    font-size: 1rem;
+    width: 80%;
+    font-size: 1.5rem;
     color: ${vars.Pink};
   }
   @media only screen and (max-width: 700px) {
@@ -61,18 +62,16 @@ export const CloseBoton = styled.div`
 `;
 
 export const ButtonModal = styled.button`
+  font-size: 1.5rem;
   display: block;
   padding: 10px 30px;
   border-radius: 100px;
-  color: #fff;
+  color: ${vars.Text};
   border: none;
   background: ${vars.Pink};
-  cursor: pointer;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  transition: 0.3s ease all;
+  cursor: pointer;  
   &:hover {
-    background: #0066ff;
+    background: ${vars.Primary};
   }
   @media only screen and (max-width: 700px) {
     padding: 10px 30px;
@@ -107,7 +106,7 @@ export const Contain = styled.div`
     margin: 2%;
     padding: 2%;
     font-size: 1rem;
-    height: 20vh;
+    height: 24vh;
     width: 80%;
     text-align: justify;
   }

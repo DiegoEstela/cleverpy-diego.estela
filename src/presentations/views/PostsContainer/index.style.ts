@@ -116,6 +116,7 @@ export const Card = styled.div`
       font-size: 1em;
       width: 100%;
       height: 50px;
+      padding-top: 24px;
       color: ${vars.Withe};
       background: rgba(0, 0, 0, 0.4);
       text-align: center;
